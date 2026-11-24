@@ -1,0 +1,10 @@
+#!/bin/zsh
+# Run pulsectl inside its .app bundle (needed for the Bluetooth permission) and show its output.
+set -euo pipefail
+root="${0:A:h}/.."
+app="$root/build/PulseCtl.app"
+[[ -d $app ]] || "$root/scripts/bundle.sh" pulsectl >/dev/null
+out=$(mktemp); err=$(mktemp)
+open -W -n --stdout "$out" --stderr "$err" "$app" --args "$@"
+cat "$out"; cat "$err" >&2
+rm -f "$out" "$err"
