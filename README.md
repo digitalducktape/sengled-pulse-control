@@ -171,6 +171,11 @@ they're worth a look if you have other Sengled gear:
 Sengled and JBL are trademarks of their owners. This project isn't affiliated with or endorsed by either,
 and it's meant for personal use with bulbs you own.
 
+## License
+
+PulseBar is released under the [MIT License](LICENSE). You're welcome to use it, change it, and share it, as
+long as you keep the copyright notice.
+
 ## Support
 
 If PulseBar gave your Pulse bulbs a second life, you can
